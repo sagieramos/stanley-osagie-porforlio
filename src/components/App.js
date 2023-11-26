@@ -1,23 +1,15 @@
-import './App.css';
-import React from 'react';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
-
+import About from './About';
+import name from '../signal.ts';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <About />
+      <div>
+        dhdhdhdh
+        {name.value}
+      </div>
     </div>
   );
 }
-
 export default App;
