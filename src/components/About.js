@@ -6,10 +6,25 @@ import { IoIosContact } from 'react-icons/io';
 import myPhoto from '../assets/myPhoto.jpg';
 
 const styles = {
+  container: {
+    margin: '0 auto',
+    maxWidth: '600px',
+  },
+  hero: {
+    marginTop: '20px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    height: '80vh',
+    position: 'relative',
+  },
+  offset: {
+    background: '#FFD700',
+    left: '-50px',
+  },
   aboutInner: {
     textAlign: 'center',
   },
   image: {
+    marginTop: '40%',
     borderRadius: '50%',
     width: '120px',
     height: '120px',
@@ -38,12 +53,23 @@ const styles = {
     flexDirection: 'row',
     alignItems: 'center',
     gap: '10px',
+    border: 'none',
+    background: 'none',
+  },
+  buttonContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'absolute',
+    bottom: '2px',
+    width: '100%',
+    borderTop: '1px solid gray',
   },
 };
 
 const About = () => (
-  <div className="about block">
-    <section className="about-offset">
+  <div style={styles.container}>
+    <section style={styles.hero}>
       <article className="about-inner" style={styles.aboutInner}>
         <img src={myPhoto} alt="MyImage" style={styles.image} />
         <h1 style={styles.heading}>Stanley Osagie</h1>
@@ -54,7 +80,7 @@ const About = () => (
           <FaGithub style={styles.icon} />
           <FaWhatsapp style={styles.icon} />
         </div>
-        <div style={{ display: 'flex' }}>
+        <div style={styles.buttonContainer}>
           <button type="button" style={styles.button}>
             <p>DOWNLOAD CV</p>
             <FaCloudDownloadAlt />
