@@ -5,6 +5,7 @@ import {
 import { IoIosContact } from 'react-icons/io';
 import myPhoto from '../assets/myPhoto.jpg';
 import { color, colorToggle, toggleColor } from '../signal.ts';
+import dev1 from '../assets/dev1.jpg';
 
 const About = () => {
   const offset = '-12px';
@@ -18,8 +19,8 @@ const About = () => {
     offset: {
       background: '#ffc23d70',
       position: 'absolute',
-      height: '90%',
-      width: '90%',
+      height: '98%',
+      width: '98%',
       borderRadius: '5px 0',
       zIndex: '-1',
       left: offset,
@@ -27,18 +28,37 @@ const About = () => {
     },
     hero: {
       color: colorToggle(!color.value),
+      padding: '50px',
       borderRadius: '5px',
-      marginTop: '20px',
+      margin: '20px',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
       height: '80vh',
       background: colorToggle(color.value),
+      minHeight: '600px',
       position: 'relative',
+    },
+    bgImg: {
+      position: 'absolute',
+      objectFit: 'cover',
+      width: '100%',
+      height: '50%',
+      left: '50%',
+      transform: 'translateX(-50%)',
+      top: '0',
     },
     aboutInner: {
       textAlign: 'center',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '100%',
+    },
+    profile: {
+      zIndex: '2',
     },
     image: {
-      marginTop: '40%',
+      marginTop: '50px',
       borderRadius: '50%',
       width: '120px',
       height: '120px',
@@ -47,8 +67,8 @@ const About = () => {
       boxShadow: '-10px 10px 0px #ffc23d33',
     },
     heading: {
-      fontSize: '28px',
-      marginTop: '10px',
+      fontSize: '32px',
+      margin: '20px',
       letterSpacing: '2px',
     },
     subheading: {
@@ -74,7 +94,8 @@ const About = () => {
     },
     buttonContainer: {
       position: 'absolute',
-      bottom: '2px',
+      bottom: '0',
+      left: '0',
       width: '100%',
     },
     buttonInnerContainer: {
@@ -101,16 +122,19 @@ const About = () => {
     <div style={styles.container}>
       <button type="button" onClick={toggleColor}>toggle</button>
       <section style={styles.hero}>
+        <img src={dev1} alt="img" style={styles.bgImg} />
         <div style={styles.offset} />
-        <article className="about-inner" style={styles.aboutInner}>
-          <img src={myPhoto} alt="MyImage" style={styles.image} />
-          <h1 style={styles.heading}>Stanley Osagie</h1>
-          <p style={styles.subheading}>Programmer</p>
-          <div className="social-icons" style={styles.socialIcons}>
-            <FaInstagram style={styles.icon} />
-            <FaLinkedin style={styles.icon} />
-            <FaGithub style={styles.icon} />
-            <FaWhatsapp style={styles.icon} />
+        <article style={styles.aboutInner}>
+          <div style={styles.profile}>
+            <img src={myPhoto} alt="MyImage" style={styles.image} />
+            <h1 style={styles.heading}>Stanley Osagie</h1>
+            <p style={styles.subheading}>Programmer</p>
+            <div className="social-icons" style={styles.socialIcons}>
+              <FaInstagram style={styles.icon} />
+              <FaLinkedin style={styles.icon} />
+              <FaGithub style={styles.icon} />
+              <FaWhatsapp style={styles.icon} />
+            </div>
           </div>
           <div style={styles.buttonContainer}>
             <div style={styles.hl} />
