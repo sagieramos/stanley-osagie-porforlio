@@ -1,5 +1,15 @@
 import { signal } from '@preact/signals-react';
 
-const name = signal<number>(0);
+type SignalNumber = ReturnType<typeof signal<number>>;
+type SignalBoolean = ReturnType<typeof signal<boolean>>;
 
-export default name;
+const name: SignalNumber = signal<number>(0);
+const color: SignalBoolean = signal<boolean>(false);
+
+const colorToggle = (bool: boolean): string => (bool ? '#282c34' : '#fff');
+
+const toggleColor = () => {
+  color.value = !color.value;
+};
+
+export { name, color, toggleColor, colorToggle };
