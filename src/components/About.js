@@ -144,7 +144,7 @@ const About = () => {
         <article style={styles.aboutInner}>
           <div style={styles.profile}>
             <img src={myPhoto} alt="MyImage" style={styles.image} />
-            <h1 style={styles.heading}>Stanley Osagie</h1>
+            <h1 style={styles.heading}>Stanley</h1>
             <StackSummary style={styles.subheading} />
             <div className style={styles.socialIcons}>
               <FaInstagram style={styles.icon} />
