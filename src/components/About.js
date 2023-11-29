@@ -4,11 +4,16 @@ import {
 } from 'react-icons/fa';
 import { IoIosContact } from 'react-icons/io';
 import myPhoto from '../assets/myPhoto.jpg';
-import { color, colorToggle, toggleColor } from '../signal.ts';
+import { color, colorToggle } from '../signal.ts';
+import StackSummary from './StackSummary';
 import dev1 from '../assets/dev1.jpg';
+import Option from './Option';
+import './about.css';
 
 const About = () => {
   const offset = '-12px';
+  const elipseMode = color.value ? 'u982y38wydg-dark-mode' : 'u982y38wydg-light-mode';
+  const typingColor = color.value ? '#FFC33D' : '#36454f';
   const styles = {
     container: {
       position: 'relative',
@@ -21,7 +26,7 @@ const About = () => {
       position: 'absolute',
       height: '98%',
       width: '98%',
-      borderRadius: '5px 0',
+      borderRadius: '4px 0',
       zIndex: '-1',
       left: offset,
       top: offset,
@@ -29,7 +34,7 @@ const About = () => {
     hero: {
       color: colorToggle(!color.value),
       padding: '50px',
-      borderRadius: '5px',
+      borderRadius: '4px',
       margin: '20px',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
       height: '80vh',
@@ -37,14 +42,23 @@ const About = () => {
       minHeight: '600px',
       position: 'relative',
     },
-    bgImg: {
+    bgImgContainer: {
       position: 'absolute',
-      objectFit: 'cover',
       width: '100%',
       height: '50%',
       left: '50%',
       transform: 'translateX(-50%)',
       top: '0',
+    },
+    bgImg: {
+      backgroundImage: `url(${dev1})`,
+      backgroundPosition: '50%',
+      backgroundRepeat: 'no-repeat',
+      borderRadius: '4px 4px 0 0',
+      position: 'relative',
+      width: '100%',
+      height: '100%',
+      overflow: 'hidden',
     },
     aboutInner: {
       textAlign: 'center',
@@ -72,8 +86,8 @@ const About = () => {
       letterSpacing: '2px',
     },
     subheading: {
-      fontSize: '16px',
-      color: '#FFC33D',
+      color: `${typingColor}`,
+      fontSize: '77px',
     },
     socialIcons: {
       marginTop: '20px',
@@ -120,16 +134,19 @@ const About = () => {
   };
   return (
     <div style={styles.container}>
-      <button type="button" onClick={toggleColor}>toggle</button>
+      <Option />
       <section style={styles.hero}>
-        <img src={dev1} alt="img" style={styles.bgImg} />
+        <div style={styles.bgImgContainer}>
+          <div className={`u982y38wydg ${elipseMode}`} style={styles.bgImg} />
+          <div style={styles.bgImgAfter} />
+        </div>
         <div style={styles.offset} />
         <article style={styles.aboutInner}>
           <div style={styles.profile}>
             <img src={myPhoto} alt="MyImage" style={styles.image} />
             <h1 style={styles.heading}>Stanley Osagie</h1>
-            <p style={styles.subheading}>Programmer</p>
-            <div className="social-icons" style={styles.socialIcons}>
+            <StackSummary style={styles.subheading} />
+            <div className style={styles.socialIcons}>
               <FaInstagram style={styles.icon} />
               <FaLinkedin style={styles.icon} />
               <FaGithub style={styles.icon} />

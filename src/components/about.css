@@ -1,0 +1,31 @@
+ .u982y38wydg::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -20px;
+    bottom: -65px;
+    right: -20px;
+    width: auto;
+    height: 100px;
+    transform: none;
+    -webkit-transform: none;
+    border-radius: 100% 100% 0 0;
+  }
+
+  .u982y38wydg-dark-mode::after {
+    background-color: #282c34
+  }
+
+  .u982y38wydg-light-mode::after {
+    background-color: #fffaf0
+  }
+
+/*   .sknskf3-dark-mode {
+    color: #fffaf0;
+  }
+
+  .sknskf3-light-mode {
+    color: #282c34;
+  } */
+
+  
