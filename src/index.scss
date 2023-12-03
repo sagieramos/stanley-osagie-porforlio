@@ -1,6 +1,19 @@
 $breakpoint-large: 1120px;
 $breakpoint-small: 680px;
 
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
 @media only screen and (min-width: $breakpoint-large) {
 }
 

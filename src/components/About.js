@@ -16,9 +16,7 @@ const About = () => {
   const typingColor = color.value ? '#FFC33D' : '#36454f';
   const styles = {
     container: {
-      position: 'relative',
       margin: '0 auto',
-      maxWidth: '588px',
       fontFamily: 'Lekton, sans-serif',
     },
     offset: {
@@ -27,20 +25,40 @@ const About = () => {
       height: '98%',
       width: '98%',
       borderRadius: '4px 0',
-      zIndex: '-1',
       left: offset,
       top: offset,
     },
+    offsetBg: {
+      backgroundColor: colorToggle(color.value),
+      height: '100%',
+      width: '100%',
+      left: '0',
+      top: '0',
+      position: 'absolute',
+    },
+    offsetContents: {
+      backgroundColor: colorToggle(color.value),
+      height: '100%',
+      width: '100%',
+      left: '0',
+      top: '0',
+      position: 'relative',
+      zIndex: '2',
+    },
     hero: {
+      boxSizing: 'border-box',
+      margin: '0 auto',
       color: colorToggle(!color.value),
       padding: '50px',
       borderRadius: '4px',
-      margin: '20px',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-      height: '80vh',
+      height: '90vh',
+      maxHeight: '780px',
       background: colorToggle(color.value),
       minHeight: '600px',
       position: 'relative',
+      maxWidth: '588px',
+      width: '90wh',
     },
     bgImgContainer: {
       position: 'absolute',
@@ -49,6 +67,7 @@ const About = () => {
       left: '50%',
       transform: 'translateX(-50%)',
       top: '0',
+      zIndex: '3',
     },
     bgImg: {
       backgroundImage: `url(${dev1})`,
@@ -67,6 +86,14 @@ const About = () => {
       justifyContent: 'center',
       alignItems: 'center',
       height: '100%',
+    },
+    articleContainer: {
+      position: 'absolute',
+      left: '0',
+      top: '0',
+      width: '100%',
+      height: '100%',
+      zIndex: '3',
     },
     profile: {
       zIndex: '2',
@@ -136,40 +163,45 @@ const About = () => {
     <div style={styles.container}>
       <Option />
       <section style={styles.hero}>
-        <div style={styles.bgImgContainer}>
-          <div className={`u982y38wydg ${elipseMode}`} style={styles.bgImg} />
-          <div style={styles.bgImgAfter} />
-        </div>
         <div style={styles.offset} />
-        <article style={styles.aboutInner}>
-          <div style={styles.profile}>
-            <img src={myPhoto} alt="MyImage" style={styles.image} />
-            <h1 style={styles.heading}>Stanley</h1>
-            <StackSummary style={styles.subheading} />
-            <div className style={styles.socialIcons}>
-              <FaInstagram style={styles.icon} />
-              <FaLinkedin style={styles.icon} />
-              <FaGithub style={styles.icon} />
-              <FaWhatsapp style={styles.icon} />
+        <div style={styles.offsetBg}>
+          <div style={styles.offsetContents}>
+            <div style={styles.bgImgContainer}>
+              <div className={`u982y38wydg ${elipseMode}`} style={styles.bgImg} />
             </div>
+            <section style={styles.articleContainer}>
+              <article style={styles.aboutInner}>
+                <div style={styles.profile}>
+                  <img src={myPhoto} alt="MyImage" style={styles.image} />
+                  <h1 style={styles.heading}>Stanley</h1>
+                  <StackSummary style={styles.subheading} />
+                  <div className style={styles.socialIcons}>
+                    <FaInstagram style={styles.icon} />
+                    <FaLinkedin style={styles.icon} />
+                    <FaGithub style={styles.icon} />
+                    <FaWhatsapp style={styles.icon} />
+                  </div>
+                </div>
+                <div style={styles.buttonContainer}>
+                  <div style={styles.hl} />
+                  <div style={styles.vl} />
+                  <div style={{ padding: '10px' }}>
+                    <div style={styles.buttonInnerContainer}>
+                      <button type="button" style={styles.button}>
+                        <p>DOWNLOAD CV</p>
+                        <FaCloudDownloadAlt />
+                      </button>
+                      <button type="button" style={styles.button}>
+                        <p>CONTACT ME</p>
+                        <IoIosContact />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </section>
           </div>
-          <div style={styles.buttonContainer}>
-            <div style={styles.hl} />
-            <div style={styles.vl} />
-            <div style={{ padding: '10px' }}>
-              <div style={styles.buttonInnerContainer}>
-                <button type="button" style={styles.button}>
-                  <p>DOWNLOAD CV</p>
-                  <FaCloudDownloadAlt />
-                </button>
-                <button type="button" style={styles.button}>
-                  <p>CONTACT ME</p>
-                  <IoIosContact />
-                </button>
-              </div>
-            </div>
-          </div>
-        </article>
+        </div>
       </section>
     </div>
   );

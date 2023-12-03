@@ -4,7 +4,9 @@ import { toggleColor, color } from '../signal.ts';
 import './option.scss';
 
 const Option = () => {
+  const { value } = color;
   const iconStyle = {
+    color: value ? '#fff' : 'black',
   };
 
   return (
