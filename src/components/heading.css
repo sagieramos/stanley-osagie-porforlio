@@ -1,0 +1,15 @@
+.heading-i-sagie {
+    position: relative;
+    font-size: 20px;
+}
+
+.heading-i-sagie::before {
+    content: "";
+    position: absolute;
+    background-clip: border-box;
+    background-image: linear-gradient(135deg, rgba(246, 184, 70, 0.4) 0%, rgba(246, 184, 70, 0.01) 100%);
+    background-origin: padding-box;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}

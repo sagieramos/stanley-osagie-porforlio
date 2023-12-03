@@ -17,10 +17,10 @@ const About = () => {
   const styles = {
     container: {
       margin: '0 auto',
-      fontFamily: 'Lekton, sans-serif',
     },
     offset: {
-      background: '#ffc23d70',
+      backgroundImage: 'linear-gradient(135deg, #f6b84666 0%, #f6b84603 100%)',
+      /* background: '#ffc23d70', */
       position: 'absolute',
       height: '98%',
       width: '98%',
@@ -122,7 +122,7 @@ const About = () => {
     icon: {
       fontSize: '18px',
       margin: '0 10px',
-      color: `${colorToggle(!color.value)}`,
+      cursor: 'pointer',
     },
     button: {
       display: 'flex',

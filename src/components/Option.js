@@ -6,7 +6,7 @@ import './option.scss';
 const Option = () => {
   const { value } = color;
   const iconStyle = {
-    color: value ? '#fff' : 'black',
+    color: value ? '#fff' : '#646464',
   };
 
   return (
