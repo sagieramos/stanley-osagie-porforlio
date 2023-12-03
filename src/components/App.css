@@ -6,7 +6,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
 }
 
 @media (prefers-reduced-motion: no-preference) {

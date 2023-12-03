@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './heading.scss';
+import './title.scss';
 import { color } from '../signal.ts';
 
-const Heading = ({ text }) => {
+const Title = ({ text }) => {
   const firstCharColor = '#f6b846';
   const firstChar = text.charAt(0);
   const displayMode = color.value ? 'title-i-dark-mode' : 'title-i-light-mode';
@@ -19,12 +19,12 @@ const Heading = ({ text }) => {
   );
 };
 
-Heading.propTypes = {
+Title.propTypes = {
   text: PropTypes.string,
 };
 
-Heading.defaultProps = {
+Title.defaultProps = {
   text: 'heading',
 };
 
-export default Heading;
+export default Title;
