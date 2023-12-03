@@ -1,8 +1,8 @@
 .title-i-sagie {
     position: relative;
     font-size: 16px;
-    margin: 24px;
-    padding: 8px;
+    margin: 24px 0;
+    padding: 8px 0;
 
     &::before {
         content: '';
@@ -23,7 +23,7 @@
         width: 32px;
         height: 32px;
         top: 55%;
-        left: 0;
+        left: -10px;
         transform: translateY(-50%);
     }
 
