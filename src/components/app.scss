@@ -53,29 +53,43 @@ $breakpoint-small: 680px;
         flex-direction: column;
         align-items: center;
         width: 100%;
+        margin-top: 650px;
     }
   }
 
 
-  @media only screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-small) {
+  @media only screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-large) {
     .App {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 100px;
+        padding: 24px;
+        gap: 24px;
         overflow: auto;
     }
 
+    .App::-webkit-scrollbar {
+        width: 6px;
+        background-color: #777;
+    }
+
+    .App::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #333;
+    }
+
     #cards-i-sagie {
-        width: 588px;
+        max-width: 588px;
+        width: 100%;
     }
 
     #about-i-sagie {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 588px;
+        width: 100%;
+        margin-top: 650px;
     }
   }
 
@@ -116,7 +130,7 @@ $breakpoint-small: 680px;
 
     #cards-i-sagie::-webkit-scrollbar-thumb {
         background: #777; 
-        border-radius: 10px;
+        border-radius: 0 5px 5px 0;
       }
 
     #cards-i-sagie::-webkit-scrollbar-thumb:hover {
