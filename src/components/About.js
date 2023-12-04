@@ -7,7 +7,6 @@ import myPhoto from '../assets/myPhoto.jpg';
 import { color, colorToggle } from '../signal.ts';
 import StackSummary from './StackSummary';
 import dev1 from '../assets/dev1.jpg';
-import Option from './Option';
 import './about.css';
 
 const About = () => {
@@ -15,9 +14,6 @@ const About = () => {
   const elipseMode = color.value ? 'u982y38wydg-dark-mode' : 'u982y38wydg-light-mode';
   const typingColor = color.value ? '#FFC33D' : '#36454f';
   const styles = {
-    container: {
-      margin: '0 auto',
-    },
     offset: {
       backgroundImage: 'linear-gradient(135deg, #f6b84666 0%, #f6b84603 100%)',
       /* background: '#ffc23d70', */
@@ -46,19 +42,18 @@ const About = () => {
       zIndex: '2',
     },
     hero: {
+      position: 'relative',
       boxSizing: 'border-box',
-      margin: '0 auto',
       color: colorToggle(!color.value),
-      padding: '50px',
+      padding: '24px',
       borderRadius: '4px',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
       height: '90vh',
       maxHeight: '780px',
       background: colorToggle(color.value),
       minHeight: '600px',
-      position: 'relative',
+      width: '100%',
       maxWidth: '588px',
-      width: '90wh',
     },
     bgImgContainer: {
       position: 'absolute',
@@ -160,50 +155,47 @@ const About = () => {
     },
   };
   return (
-    <div style={styles.container}>
-      <Option />
-      <section style={styles.hero}>
-        <div style={styles.offset} />
-        <div style={styles.offsetBg}>
-          <div style={styles.offsetContents}>
-            <div style={styles.bgImgContainer}>
-              <div className={`u982y38wydg ${elipseMode}`} style={styles.bgImg} />
-            </div>
-            <section style={styles.articleContainer}>
-              <article style={styles.aboutInner}>
-                <div style={styles.profile}>
-                  <img src={myPhoto} alt="MyImage" style={styles.image} />
-                  <h1 style={styles.heading}>Stanley</h1>
-                  <StackSummary style={styles.subheading} />
-                  <div className style={styles.socialIcons}>
-                    <FaInstagram style={styles.icon} />
-                    <FaLinkedin style={styles.icon} />
-                    <FaGithub style={styles.icon} />
-                    <FaWhatsapp style={styles.icon} />
-                  </div>
-                </div>
-                <div style={styles.buttonContainer}>
-                  <div style={styles.hl} />
-                  <div style={styles.vl} />
-                  <div style={{ padding: '10px' }}>
-                    <div style={styles.buttonInnerContainer}>
-                      <button type="button" style={styles.button}>
-                        <p>DOWNLOAD CV</p>
-                        <FaCloudDownloadAlt />
-                      </button>
-                      <button type="button" style={styles.button}>
-                        <p>CONTACT ME</p>
-                        <IoIosContact />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </section>
+    <section className="about-i-sagie" style={styles.hero}>
+      <div style={styles.offset} />
+      <div style={styles.offsetBg}>
+        <div style={styles.offsetContents}>
+          <div style={styles.bgImgContainer}>
+            <div className={`u982y38wydg ${elipseMode}`} style={styles.bgImg} />
           </div>
+          <section style={styles.articleContainer}>
+            <article style={styles.aboutInner}>
+              <div style={styles.profile}>
+                <img src={myPhoto} alt="MyImage" style={styles.image} />
+                <h1 style={styles.heading}>Stanley</h1>
+                <StackSummary style={styles.subheading} />
+                <div className style={styles.socialIcons}>
+                  <FaInstagram style={styles.icon} />
+                  <FaLinkedin style={styles.icon} />
+                  <FaGithub style={styles.icon} />
+                  <FaWhatsapp style={styles.icon} />
+                </div>
+              </div>
+              <div style={styles.buttonContainer}>
+                <div style={styles.hl} />
+                <div style={styles.vl} />
+                <div style={{ padding: '10px' }}>
+                  <div style={styles.buttonInnerContainer}>
+                    <button type="button" style={styles.button}>
+                      <p>DOWNLOAD CV</p>
+                      <FaCloudDownloadAlt />
+                    </button>
+                    <button type="button" style={styles.button}>
+                      <p>CONTACT ME</p>
+                      <IoIosContact />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 export default About;

@@ -1,6 +1,8 @@
 import { color } from '../signal.ts';
 import About from './About';
 import Cards from './Cards';
+import Option from './Option';
+import './app.scss';
 
 function App() {
   const { value } = color;
@@ -12,8 +14,9 @@ function App() {
   };
   return (
     <div style={styles} className="App">
-      <About />
-      <Cards />
+      <Option />
+      <div id="about-i-sagie"><About /></div>
+      <div id="cards-i-sagie"><Cards /></div>
       <div />
     </div>
   );

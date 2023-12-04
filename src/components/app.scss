@@ -1,0 +1,83 @@
+$breakpoint-large: 1120px;
+$breakpoint-small: 680px;
+
+.App {
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+#cards-i-sagie {
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: $breakpoint-small) {
+    .App {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 100px;
+    }
+
+    #cards-i-sagie {
+        max-width: 588px;
+        width: 100%;
+    }
+
+    #about-i-sagie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+  }
+
+
+  @media only screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-small) {
+    .App {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 100px;
+    }
+
+    #cards-i-sagie {
+        width: 588px;
+    }
+
+    #about-i-sagie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 588px;
+    }
+    
+
+  }
+
+@media only screen and (min-width: $breakpoint-large) {
+    .App {
+        display: flex;
+        gap: 0;
+    }
+
+    #cards-i-sagie {
+        width: 588px;
+    }
+
+    #about-i-sagie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 588px;
+    }
+  }
+  
+
+  
+
+  

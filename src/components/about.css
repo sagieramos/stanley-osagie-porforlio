@@ -1,3 +1,5 @@
+ .about-i-sagie {}
+ 
  .u982y38wydg::after {
     content: "";
     display: block;
@@ -17,7 +19,7 @@
   }
 
   .u982y38wydg-light-mode::after {
-    background-color: #fffaf0
+    background-color: #ffff
   }
 
 
