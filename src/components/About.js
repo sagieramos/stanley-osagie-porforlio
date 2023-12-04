@@ -18,8 +18,8 @@ const About = () => {
       backgroundImage: 'linear-gradient(135deg, #f6b84666 0%, #f6b84603 100%)',
       /* background: '#ffc23d70', */
       position: 'absolute',
-      height: '98%',
-      width: '98%',
+      height: '100%',
+      width: '100%',
       borderRadius: '4px 0',
       left: offset,
       top: offset,

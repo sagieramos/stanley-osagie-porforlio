@@ -12,11 +12,13 @@ function App() {
     backgroundColor: value ? '#161616' : '#F6F6F6',
     color: !value ? '#646464' : '#fff',
   };
+  const displayMode = value ? 'u982y38wydg-dark-mode' : 'u982y38wydg-light-mode';
+
   return (
     <div style={styles} className="App">
       <Option />
       <div id="about-i-sagie"><About /></div>
-      <div id="cards-i-sagie"><Cards /></div>
+      <div id="cards-i-sagie" className={displayMode}><Cards /></div>
       <div />
     </div>
   );

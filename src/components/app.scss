@@ -3,13 +3,22 @@ $breakpoint-small: 680px;
 
 .App {
     width: 100vw;
+    height: 100vh;
     box-sizing: border-box;
 }
+
+.u982y38wydg-dark-mode {
+    background-color: #222222
+  }
+
+  .u982y38wydg-light-mode {
+    background-color: #ffff
+  }
 
 #cards-i-sagie {
     position: relative;
     box-sizing: border-box;
-    border-radius: 4px;
+    padding: 12px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -19,7 +28,19 @@ $breakpoint-small: 680px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 100px;
+        padding: 24px;
+        gap: 24px;
+        overflow: auto;
+    }
+
+    .App::-webkit-scrollbar {
+        width: 6px;
+        background-color: #777;
+    }
+
+    .App::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #333;
     }
 
     #cards-i-sagie {
@@ -43,6 +64,7 @@ $breakpoint-small: 680px;
         align-items: center;
         justify-content: center;
         padding: 100px;
+        overflow: auto;
     }
 
     #cards-i-sagie {
@@ -55,26 +77,51 @@ $breakpoint-small: 680px;
         align-items: center;
         width: 588px;
     }
-    
-
   }
 
 @media only screen and (min-width: $breakpoint-large) {
     .App {
         display: flex;
+        align-items: center;
+        justify-content: center;
         gap: 0;
     }
 
     #cards-i-sagie {
-        width: 588px;
+        width: 800px;
+        max-height: 668px;
+        overflow-y: scroll;
+        border-radius: 0 5px 5px 0 ;
     }
 
     #about-i-sagie {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 588px;
+        width: 528px;
+        max-height: 700px;
     }
+
+    #cards-i-sagie::-webkit-scrollbar {
+        width: 6px;
+        background-color: #77777700;
+        height: 10px;
+    }
+
+    #cards-i-sagie::-webkit-scrollbar-track {
+        background-color: transparent;
+        border-radius: 0 5px 5px 0;
+        height: 10px;
+    }
+
+    #cards-i-sagie::-webkit-scrollbar-thumb {
+        background: #777; 
+        border-radius: 10px;
+      }
+
+    #cards-i-sagie::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #f6b84666 0%, #f6b84603 100%),
+      }
   }
   
 
