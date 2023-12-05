@@ -7,6 +7,7 @@ import myPhoto from '../assets/myPhoto.jpg';
 import { color, colorToggle } from '../signal.ts';
 import StackSummary from './StackSummary';
 import dev1 from '../assets/dev1.jpg';
+import Option from './Option';
 import './about.css';
 
 const About = () => {
@@ -50,8 +51,8 @@ const About = () => {
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
       height: '90vh',
       maxHeight: '780px',
-      background: colorToggle(color.value),
       minHeight: '600px',
+      background: colorToggle(color.value),
       width: '100%',
       maxWidth: '588px',
     },
@@ -65,14 +66,15 @@ const About = () => {
       zIndex: '3',
     },
     bgImg: {
-      backgroundImage: `url(${dev1})`,
-      backgroundPosition: '50%',
-      backgroundRepeat: 'no-repeat',
-      borderRadius: '4px 4px 0 0',
       position: 'relative',
       width: '100%',
       height: '100%',
       overflow: 'hidden',
+    },
+    bgImgI: {
+      objectFit: 'cover',
+      width: '100%',
+      height: '100%',
     },
     aboutInner: {
       textAlign: 'center',
@@ -156,11 +158,14 @@ const About = () => {
   };
   return (
     <section className="about-i-sagie" style={styles.hero}>
+      <div className="menu-option"><Option /></div>
       <div style={styles.offset} />
       <div style={styles.offsetBg}>
         <div style={styles.offsetContents}>
           <div style={styles.bgImgContainer}>
-            <div className={`u982y38wydg ${elipseMode}`} style={styles.bgImg} />
+            <div className={`u982y38wydg ${elipseMode}`} style={styles.bgImg}>
+              <img src={dev1} alt="MyImage" style={styles.bgImgI} />
+            </div>
           </div>
           <section style={styles.articleContainer}>
             <article style={styles.aboutInner}>

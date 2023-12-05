@@ -1,4 +1,7 @@
- .about-i-sagie {}
+
+ .about-i-sagie * {
+  box-sizing: border-box;
+ }
  
  .u982y38wydg::after {
     content: "";
@@ -20,6 +23,24 @@
 
   .u982y38wydg-light-mode::after {
     background-color: #ffff
+  }
+  @media only screen and (max-width: 680px) {
+    .menu-option {
+      position: fixed;
+      top: 10px;
+      background: red;
+      z-index: 4;
+    }
+  }
+
+  @media only screen and (min-width: 680px) {
+    .menu-option {
+      position: sticky;
+      top: 0;
+      left: 10px;
+      background: red;
+      z-index: 6;
+    }
   }
 
 
