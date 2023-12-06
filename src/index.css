@@ -6,7 +6,21 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+  overflow: auto;
+}
+
+body::-webkit-scrollbar {
+  width: 1px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #777;
+  border-radius: 0 5px 5px 0;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #f6b84666 0%, #f6b84603 100%);
+  border-radius: 0 5px 5px 0;
 }
 
 code {
