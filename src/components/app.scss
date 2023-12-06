@@ -2,9 +2,10 @@ $breakpoint-large: 1120px;
 $breakpoint-small: 680px;
 
 .App {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     box-sizing: border-box;
+    position: relative;
 }
 
 .u982y38wydg-dark-mode {
@@ -21,6 +22,16 @@ $breakpoint-small: 680px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+@media only screen and (min-width: $breakpoint-small) {
+    .option-7263j {
+        position: fixed;
+        align-self: flex-start;
+        margin-left: -50px;
+        top: 0;
+        z-index: 6;
+    }
+}
+
 @media only screen and (max-width: $breakpoint-small) {
     .App {
         position: relative;
@@ -33,6 +44,12 @@ $breakpoint-small: 680px;
         overflow: auto;
     }
 
+    #about-i-sagie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
     .App::-webkit-scrollbar {
         width: 6px;
         background-color: #777;
@@ -43,18 +60,15 @@ $breakpoint-small: 680px;
         background-color: #333;
     }
 
-    #cards-i-sagie {
-        max-width: 588px;
+    .wdth {
         width: 100%;
     }
 
-    #about-i-sagie {
+/*     #about-i-sagie {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        margin-top: 800px;
-    }
+    } */
   }
 
 
@@ -88,8 +102,11 @@ $breakpoint-small: 680px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        margin-top: 800px;
+
+    }
+
+    .wdth {
+        width: 585px;
     }
   }
 
@@ -99,6 +116,7 @@ $breakpoint-small: 680px;
         align-items: center;
         justify-content: center;
         gap: 0;
+        height: 100vh;
     }
 
     #cards-i-sagie {
@@ -112,8 +130,8 @@ $breakpoint-small: 680px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 528px;
-        max-height: 700px;
+        max-height: 750px;
+        width: 585px;
     }
 
     #cards-i-sagie::-webkit-scrollbar {

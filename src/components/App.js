@@ -16,9 +16,13 @@ function App() {
 
   return (
     <div style={styles} className="App">
-      <div id="menu-i-sagie"><Option /></div>
-      <div id="about-i-sagie"><About /></div>
-      <div id="cards-i-sagie" className={displayMode}><Cards /></div>
+      <div id="about-i-sagie" className="wdth">
+        <Option />
+        <About />
+      </div>
+      <div id="cards-i-sagie" className={`${displayMode} wdth`}>
+        <Cards />
+      </div>
       <div />
     </div>
   );

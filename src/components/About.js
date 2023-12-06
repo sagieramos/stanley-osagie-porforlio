@@ -7,7 +7,6 @@ import myPhoto from '../assets/myPhoto.jpg';
 import { color, colorToggle } from '../signal.ts';
 import StackSummary from './StackSummary';
 import dev1 from '../assets/dev1.jpg';
-import Option from './Option';
 import './about.css';
 
 const About = () => {
@@ -51,9 +50,10 @@ const About = () => {
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
       height: '90vh',
       maxHeight: '780px',
-      minHeight: '600px',
+      minHeight: '688px',
       background: colorToggle(color.value),
       width: '100%',
+      minWidth: '256px',
       maxWidth: '588px',
     },
     bgImgContainer: {
@@ -158,7 +158,6 @@ const About = () => {
   };
   return (
     <section className="about-i-sagie" style={styles.hero}>
-      <div className="menu-option"><Option /></div>
       <div style={styles.offset} />
       <div style={styles.offsetBg}>
         <div style={styles.offsetContents}>
