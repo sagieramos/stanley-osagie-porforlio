@@ -9,4 +9,6 @@ const toggleColor = () => {
   color.value = !color.value;
 };
 
-export { name, color, toggleColor, colorToggle };
+export {
+  name, color, toggleColor, colorToggle,
+};
