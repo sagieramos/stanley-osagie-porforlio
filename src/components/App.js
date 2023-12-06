@@ -1,4 +1,4 @@
-import { color } from '../signal.ts';
+import { color } from '../signal';
 import About from './About';
 import Cards from './Cards';
 import Option from './Option';

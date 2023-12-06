@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './title.scss';
-import { color } from '../signal.ts';
+import { color } from '../signal';
 
 const Title = ({ text }) => {
   const firstCharColor = '#f6b846';

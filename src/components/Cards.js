@@ -1,7 +1,7 @@
 import React from 'react';
 import Aboutme from './Aboutme';
 import './cards.scss';
-import { colorToggle, color } from '../signal.ts';
+import { colorToggle, color } from '../signal';
 
 const Cards = () => {
   const style = {

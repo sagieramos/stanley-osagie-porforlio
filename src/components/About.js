@@ -4,7 +4,7 @@ import {
 } from 'react-icons/fa';
 import { IoIosContact } from 'react-icons/io';
 import myPhoto from '../assets/myPhoto.jpg';
-import { color, colorToggle } from '../signal.ts';
+import { color, colorToggle } from '../signal';
 import StackSummary from './StackSummary';
 import dev1 from '../assets/dev1.jpg';
 import './about.css';
